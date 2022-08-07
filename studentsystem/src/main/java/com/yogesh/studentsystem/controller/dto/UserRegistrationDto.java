@@ -1,21 +1,34 @@
 package com.yogesh.studentsystem.controller.dto;
 
+import com.yogesh.studentsystem.model.Role;
+
 public class UserRegistrationDto {
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    private Role role;
+
     public UserRegistrationDto(){
 
     }
 
-    public UserRegistrationDto(String firstName, String lastName, String email, String password) {
+    public UserRegistrationDto(String firstName, String lastName, String email, String password,Role role) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.role=role;
     }
 
     public String getFirstName() {

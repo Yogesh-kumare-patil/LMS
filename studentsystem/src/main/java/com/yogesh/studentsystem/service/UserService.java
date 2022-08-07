@@ -3,9 +3,11 @@ package com.yogesh.studentsystem.service;
 
 import com.yogesh.studentsystem.controller.dto.UserRegistrationDto;
 import com.yogesh.studentsystem.model.User;
-import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.stereotype.Service;
 
-
-public interface UserService extends UserDetailsService{
-    User save(UserRegistrationDto registrationDto);
+@Service
+public interface UserService {
+   User save(UserRegistrationDto userRegistrationDto);
+   User loadUserByUsername(String username);
 }
+
