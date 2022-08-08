@@ -18,6 +18,7 @@ public class BookService {
         Book newBook= new Book();
         newBook.setName(bookDto.getName());
         newBook.setAuthor(bookDto.getAuthor());
+        newBook.setCategery(bookDto.getCategery());
         return bookRepo.save(newBook);
     }
 }
